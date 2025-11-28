@@ -1,0 +1,2 @@
+Gerenciador de contatos.
+Este projeto serve para fazer uma lista de contatos usando uma API e o Firebase como bando de dados. O projeto foi criado utilizando-se a API 'jsonplaceholder.typicode.com/users' e o bando de dados em tempo real do firebase para realização do CRUD de novos contatos.
