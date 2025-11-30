@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Contatos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/adicionar-contato">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let c of todosContatos">
+
+      <!-- Template do componente -->
+      <app-contato-item [contato]="c"></app-contato-item>
+
+      <!-- Botões só aparecem para contatos do Firebase (que têm id) -->
+      <ion-button
+        *ngIf="c.id"
+        slot="end"
+        color="warning"
+        (click)="editarContato(c)"
+      >
+        Editar
+      </ion-button>
+
+      <ion-button
+        *ngIf="c.id"
+        slot="end"
+        color="danger"
+        (click)="removerContato(c.id!)"
+      >
+        Excluir
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

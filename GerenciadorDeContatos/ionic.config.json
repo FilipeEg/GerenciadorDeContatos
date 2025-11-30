@@ -1,0 +1,7 @@
+{
+  "name": "GerenciadorDeContatos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
